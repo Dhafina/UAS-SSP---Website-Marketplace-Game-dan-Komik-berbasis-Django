@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block asia %}
+<h2 style="padding-top:200px;" class="text-center">Daftar Barang</h2>
+<div class="container">
+    <div class="text-left mb-2">
+        <a href="/add" class="btn btn-success">Tambah Data</a>
+    </div>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>Kode Barang</th>
+            <th>Nama</th>
+            <th>Stok</th>
+            <th>Harga</th>
+            <th>Link Gambar</th>
+            <th>Jenis</th>
+            <th>Aksi</th>
+        </tr>
+
+    {% for Barang in barangs %}
+        <tr>
+            <th>{{ Barang.kodebrg }}</th>
+            <th>{{ Barang.nama }}</th>
+            <th>{{ Barang.stok }}</th>
+            <th>{{ Barang.harga }}</th>
+            <th class="text-center">
+              <div class="form-group">
+                  <label for="link_gbr">Gambar saat ini</label><br>
+                  {% if Barang.link_gbr %}
+                      <img src="{{ Barang.link_gbr.url }}" alt="{{ Barang.nama }}" style="max-height: 200px;">
+                  {% else %}
+                      <p>Tidak ada gambar</p>
+                  {% endif %}
+              </div>
+            </th>
+            <th>{{ Barang.jenis_id.nama }}</th>
+            <th>
+                <a href="{% url 'ubah_brg' Barang.id %}" class="btn btn-warning">Edit</a>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-{{ Barang.id }}">
+                  Hapus
+                </button>
+                <div class="modal fade" id="hapus-{{ Barang.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Are you certain you want to delete it?</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Kode Barang: {{ Barang.kodebrg }}
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Revoke</button>
+                          <a href="{% url 'hapus_brg' Barang.id %}" class="btn btn-danger">Certainly</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </th>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}

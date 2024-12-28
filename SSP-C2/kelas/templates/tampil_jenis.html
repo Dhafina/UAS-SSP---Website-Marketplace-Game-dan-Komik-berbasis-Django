@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block asia %}
+<h2 style="padding-top:200px;" class="text-center">Daftar Jenis</h2>
+<div class="container">
+    <div class="text-left mb-2">
+        <a href="{% url 'tambah_jenis' %}" class="btn btn-success">Tambah Jenis</a>
+    </div>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>Nama Jenis</th>
+            <th>Keterangan</th>
+            <th>Aksi</th>
+        </tr>
+
+    {% for jenis in jenis %}
+        <tr>
+            <th>{{ jenis.nama }}</th>
+            <th>{{ jenis.ket }}</th>
+            <th>
+                <a href="{% url 'ubah_jenis' jenis.id %}" class="btn btn-warning">Edit</a>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-{{ jenis.id }}">
+                  Hapus
+                </button>
+                <div class="modal fade" id="hapus-{{ jenis.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Are you certain you want to delete it?</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Nama Jenis: {{ jenis.nama }}
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Revoke</button>
+                          <a href="{% url 'hapus_jenis' jenis.id %}" class="btn btn-danger">Certainly</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </th>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}

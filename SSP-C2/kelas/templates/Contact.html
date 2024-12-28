@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block asia %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummerStride | Contact</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/hover-master/css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/tmplt/css/templatemo.css">
+    <link rel="stylesheet" href="assets/tmplt/css/custom.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <br><br>
+        <!-- Start Content Page -->
+<section class="contact-content">
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-8 m-auto text-center text-black">
+            <h1 class="display-3">Hubungi Kami</h1>
+            <p class="lead">
+                Kirim Pesan dan Kritik Supaya Platform Digicomics Menjadi Lebih Baik!
+            </p>
+        </div>
+    </div>
+</section>
+        <!-- End Content Page -->
+
+ <!-- Start Contact -->
+ <div class="container py-5">
+    <div class="row py-5">
+        <form class="col-md-9 m-auto" method="post" role="form">
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <form action="#" method="post">
+                    <label for="inputname">Name</label>
+                    <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="inputemail">Email</label>
+                    <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="inputsubject">Subject</label>
+                <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputmessage">Message</label>
+                <textarea class="form-control mt-1" id="message" name="message" placeholder="Message" rows="8" required></textarea>
+            </div>
+            <div class="row">
+                <div class="col text-end mt-2">
+                    <button type="submit" class="btn btn-lg px-3 btn-submit">Submit</button>
+                </form>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- End Contact -->
+    <!-- Bootsrap java -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/tmplt/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/tmplt/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/tmplt/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/tmplt/js/templatemo.js"></script>
+    <script src="assets/tmplt/js/custom.js"></script>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block asia %}
+<h2 style="padding-top:200px;" class="text-center">Ubah Jenis</h2>
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-group">
+            <label for="link_gbr">Gambar saat ini</label><br>
+            {% if barangs.link_gbr %}
+                <img src="{{ order.link_gbr.url}}" alt="{{ barangs.nama }}">
+            {% else %}
+                <p>Tidak ada gambar</p>
+            {% endif %}
+        <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+    </form>
+</div>
+{% endblock %}

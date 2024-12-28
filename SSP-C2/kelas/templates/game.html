@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block asia %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digicomics | Games</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="assets/hover-master/css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/tmplt/css/templatemo.css">
+    <link rel="stylesheet" href="assets/tmplt/css/custom.css">
+
+    <style>
+        #my-products{
+            padding-top: 3rem;
+        }
+        .form-control {
+            height: 30px;
+            font-size: 12px;
+        }
+
+        .btn-outline-success {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .product-details {
+            padding: 10px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 12px;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .product-description {
+            font-size: 10px;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .btn-buy {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 -10px; /* Add margin to the row for better spacing */
+        }
+
+        .col {
+            flex: 0 0 calc(33.3333% - 20px); /* Updated flex and margin for better spacing */
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+<br><br>
+    <section id="my-products" class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/pubg1.jpeg'%}" alt="Produk 1">
+                    <div class="product-details">
+                        <h4 class="product-title">PUBG</h4>
+                        <p class="product-price">Rp 350.000</p>
+                        <p class="product-description">Genre : Permainan battle royale, Permainan menembak</p>
+                        <p class="product-description">sebuah permainan battle royale, di mana 100 orang sekaligus dapat bermain secara daring. Pemenang dari permainan ini adalah individu atau tim yang dapat bertahan hingga akhir.
+                             Pemain bisa bermain sendirian, tim dengan dua orang, dan tim dengan empat orang.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/gi.jpeg'%}" alt="Produk 2">
+                    <div class="product-details">
+                        <h4 class="product-title">Genshin Impact</h4>
+                        <p class="product-price">FREE</p>
+                        <p class="product-description">Genre : Petualangan, aksi</p>
+                        <p class="product-description">Genshin Impact adalah permainan video yang dikembangkan dan diterbitkan oleh miHoYo. Permainan ini dirilis pada tanggal 28 September 2020 di Android, iOS, Windows, 
+                            dan PlayStation 4, serta 28 April 2021 di platform PlayStation 5</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/cod.jpeg'%}" alt="Produk 3">
+                    <div class="product-details">
+                        <h4 class="product-title">Call of Duty</h4>
+                        <p class="product-price">Rp 450.000</p>
+                        <p class="product-description">Genre : Aksi, Menembak</p>
+                        <p class="product-description">Call of Duty adalah waralaba permainan video penembak orang pertama yang diterbitkan oleh Activision. Dimulai pada tahun 2003, 
+                            pertama kali berfokus pada permainan yang berlatar Perang Dunia II</p>
+                        <a href="/order"><button  class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/cs.jpeg'%}" alt="Produk 4">
+                    <div class="product-details">
+                        <h4 class="product-title">Counter strike</h4>
+                        <p class="product-price">Rp 265.000</p>
+                        <p class="product-description">Genre : Menembak</p>
+                        <p class="product-description">Counter-Strike adalah seri gim video penembak orang pertama multipemain di mana tim teroris bertempur untuk melakukan aksi teror sementara kontra-teroris mencoba mencegahnya. 
+                            Serial ini dimulai di Windows pada tahun 1999 dengan merilis permainan pertama, Counter-Strike.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/re.png'%}" alt="Produk 5">
+                    <div class="product-details">
+                        <h4 class="product-title">Resident Evil</h4>
+                        <p class="product-price">Rp 255.000</p>
+                        <p class="product-description">Genre : Survival horror; Third-person shooter; First-person shooter</p>
+                        <p class="product-description">Resident Evil, yang dikenal di Jepang sebagai Biohazard, adalah serial permainan video horor Jepang dan waralaba media yang dibuat oleh Capcom.
+                             Ini terdiri dari game survival horror game survival horror, third-person shooter, dan first-person shooter.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/sv.jpeg'%}" alt="Produk 6">
+                    <div class="product-details">
+                        <h4 class="product-title">Stardew valley</h4>
+                        <p class="product-price">Rp 345.000</p>
+                        <p class="product-description">Genre :  Permainan video independen</p>
+                        <p class="product-description">Stardew Valley adalah permainan peran video simulasi pertanian dan peternakan yang dikembangkan secara swadaya oleh Eric Barone.
+                             Permainan video untuk Microsoft Windows, Mac, Linux, PlayStation 4, Xbox, Nintendo Switch, PlayStation Vita, Android, iOS.
+                             Permainan ini diluncurkan pada tanggal 26 Februari 2016.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tambahkan produk lainnya di sini sesuai kebutuhan -->
+        </div>
+    </section>
+
+<script src="other-assets/js/jquery.js"></script>
+        
+<!--modernizr.min.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<!--bootstrap.min.js-->
+<script src="other-assets/js/bootstrap.min.js"></script>
+
+<!-- bootsnav js -->
+<script src="other-assets/js/bootsnav.js"></script>
+
+<!--owl.carousel.js-->
+<script src="other-assets/js/owl.carousel.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!--Custom JS-->
+<script src="other-assets/js/custom.js"></script>
+
+    <!-- Bootsrap java -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/tmplt/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/tmplt/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/tmplt/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/tmplt/js/templatemo.js"></script>
+    <script src="assets/tmplt/js/custom.js"></script>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,260 @@
+.navbar{
+    background-color: #1d8b68;
+}
+
+.logo{
+    max-width: 100px;
+    height: auto;
+    width: auto;
+}
+
+.navbar-nav {
+    margin: auto; 
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 0 10px; 
+    color: white;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important; 
+  }
+
+
+ /* #carouselExampleIndicators {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .carousel-inner img {
+            max-width: 100%;
+            height: auto;
+       } */
+  #carouselExampleIndicators .carousel-inner {
+    transition: trans
+    form 00.01s ease-in-out; /* Menambahkan efek transisi */
+  }
+
+/* About Start  */
+  #about {
+    padding: 5rem 7% 1.4rem;
+    background-color:#1d8b68;
+}
+
+#about h2 {
+    color: white;
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+
+  }
+.menu h2 {
+    color: black;
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about .row {
+    display: flex;
+    align-items: center; /* Menyusun elemen secara vertikal di tengah */
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+    position: relative; /* Menjadikan posisi relatif terhadap parent */
+}
+
+.about .row .about-img img {
+    height: auto;
+    width: 100%;
+}
+
+.about .row .content {
+    color: white;
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.about .row .content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* About End */
+/* Catalogue Start */
+#catalogue {
+  padding: 5rem 7% 1.4rem;
+}
+.catalogue .container h1, h6{
+  text-align: center;
+}
+/* Catalogue End */
+
+.card-img-top {
+  height: 100%; /* You can adjust this value as needed */
+  object-fit: cover;
+}
+
+body {
+  position: relative;
+  padding-bottom: 600px; 
+  
+}
+
+footer{
+  background: #111;
+  height: auto;
+  width: 100%;
+  font-family: "Open Sans";
+  padding-top: 40px;
+  background-color: #1d8b68;
+  color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.logo-bottom{
+  max-width: 25rem;
+  height: auto;
+  width: auto;
+}
+
+/* Content.html Start */
+.contact-content{
+  padding-top: 2rem;
+}
+
+.btn-submit {
+  background-color: #196aff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  }
+  /* Gaya Input Form */
+  .form-control {
+      border-color: #196aff; /* Warna garis input */
+  }
+  
+  /* Gaya Input Fokus */
+  .form-control:focus {
+      border-color: #196aff; /* Warna garis input saat fokus */
+      box-shadow: 0 0 0 0.2rem rgba(25, 106, 255, 0.25); /* Efek bayangan saat fokus */
+  }
+  /* Ruang Antar Elemen Form */
+  .form-group {
+      margin-bottom: 1.5rem; /* Ruang antar elemen formulir */
+  }
+  .contact-content h1, .contact-content p {
+      color: #333; /* Warna teks */
+  }
+  /* Content.html End */
+
+  .order-form{
+    padding-top: 4rem;
+  }
+
+  /* Order.html */
+  form {
+    max-width: 400px; /* Lebar maksimum form */
+    margin: 0 auto; /* Membuat form menjadi terpusat di tengah halaman */
+    padding: 20px; /* Memberikan ruang di sekitar form */
+    background-color: #f9f9f9; /* Warna latar belakang form */
+    border-radius: 8px; /* Memutar sudut form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan pada form */
+}
+
+/* Gaya Input Form */
+.form-control {
+    border-color: #ccc; /* Warna garis input */
+}
+
+/* Gaya Input Fokus */
+.form-control:focus {
+    border-color: #196aff; /* Warna garis input saat fokus */
+    box-shadow: 0 0 0 0.2rem rgba(25, 106, 255, 0.25); /* Efek bayangan saat fokus */
+}
+
+/* Ruang Antar Elemen Form */
+.form-group {
+    margin-bottom: 20px; /* Ruang antar elemen formulir */
+}
+
+/* Gaya Tombol Submit */
+.btn-submit {
+    background-color: #196aff; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    width: 100%; /* Tombol mengambil lebar penuh */
+    border-radius: 5px; /* Memutar sudut tombol */
+}
+/* Order.html */

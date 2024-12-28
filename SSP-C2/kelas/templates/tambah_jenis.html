@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block asia %}
+<h2 style="padding-top:200px;" class="text-center">Tambah Jenis</h2>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="nama" class="form-label">Nama Jenis</label>
+            <input type="text" class="form-control" id="nama" name="nama" required>
+        </div>
+        <div class="mb-3">
+            <label for="ket" class="form-label">Keterangan</label>
+            <textarea class="form-control" id="ket" name="ket" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Tambah Jenis</button>
+    </form>
+</div>
+{% endblock %}

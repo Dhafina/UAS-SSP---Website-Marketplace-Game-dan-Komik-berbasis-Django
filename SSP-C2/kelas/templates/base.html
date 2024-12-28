@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman | {{titel}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="{% static 'aos/css/aos.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link href="{% static 'assets/hover-master/css/hover-min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/tmplt/css/templatemo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/tmplt/css/custom.css' %}">
+</head>
+<style>
+    .belakang {
+        background-color: black;
+        opacity: 0.8;
+    }
+</style>
+<body>
+    <!-- Navbar Start -->
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg fixed-top shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img class="logo" src="{% static 'img copy/logo.png' %}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item hvr-pulse-grow">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item hvr-pulse-grow">
+                            <a class="nav-link inactive" href="/#about">About</a>
+                        </li>
+                        <li class="nav-item hvr-pulse-grow">
+                            <a class="nav-link inactive" href="/comic">Comics</a>
+                        </li>
+                        <li class="nav-item hvr-pulse-grow">
+                            <a class="nav-link inactive" href="/game">Games</a>
+                        </li>
+                        <li class="nav-item hvr-pulse-grow">
+                            <a class="nav-link inactive" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown hvr-pulse-grow">
+                            <a class="nav-link dropdown-toggle inactive" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'list_barang' %}">List Barang</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'list_jenis' %}">List Jenis</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Navbar End -->
+
+    {% block asia %}
+    {% endblock %}
+
+    <!-- Contact Start -->
+    <footer>
+        <div class="footer-content">
+            <img class="logo-bottom" src="{% static 'img/wht.png' %}" alt="">
+            <br>
+            <p>Masuki Dunia Penuh Cerita</p>
+            <p>By Digicomics</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2024 Digicomics. designed by <span>Dhafina</span></p>
+        </div>
+    </footer>
+    <!-- Contact End -->
+
+    <script src="{% static 'aos/js/aos.js' %}"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/tmplt/js/jquery-1.11.0.min.js' %}"></script>
+    <script src="{% static 'assets/tmplt/js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script src="{% static 'assets/tmplt/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/tmplt/js/templatemo.js' %}"></script>
+    <script src="{% static 'assets/tmplt/js/custom.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block asia %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digicomics | Comics</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="assets/hover-master/css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/tmplt/css/templatemo.css">
+    <link rel="stylesheet" href="assets/tmplt/css/custom.css">
+
+    <style>
+        #my-products{
+            padding-top: 3rem;
+        }
+        .form-control {
+            height: 30px;
+            font-size: 12px;
+        }
+
+        .btn-outline-success {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .product-details {
+            padding: 10px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 12px;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .product-description {
+            font-size: 10px;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .btn-buy {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 -10px; /* Add margin to the row for better spacing */
+        }
+
+        .col {
+            flex: 0 0 calc(33.3333% - 20px); /* Updated flex and margin for better spacing */
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <!-- title of site -->
+    <title>Digicomics</title>
+    
+</head>
+<body>
+    <br>
+    <br>
+    
+    <section id="my-products" class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/naruto.jpeg'%}" alt="Produk 1">
+                    <div class="product-details">
+                        <h4 class="product-title">Naruto</h4>
+                        <p class="product-price">Rp 30.000/pcs</p>
+                        <p class="product-description">Genre : Aksi, Petualangan, Fantasi</p>
+                        <p class="product-description">Naruto adalah seorang ninja dari desa Konoha (Konohagakure), sebuah desa fiktif yang konon tersembunyi di antara rimbunnya dedaunan hutan. Sejak kecil ia ditinggal oleh kedua orang tuanya, sehingga ia tidak pernah merasakan bagaimana kasih sayang orang tua kepada anaknya. Dengan 
+                            dukungan dari teman-teman dan guru-gurunya, Naruto tumbuh menjadi pemuda yang ceria, optimis, dan pemberani.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/onepiece.jpeg'%}" alt="Produk 2">
+                    <div class="product-details">
+                        <h4 class="product-title">One Piece</h4>
+                        <p class="product-price">Rp 45.000/pcs</p>
+                        <p class="product-description">Genre : Aksi, Petualangan, Fantasi</p>
+                        <p class="product-description">One Piece adalah tujuan utama Monkey D. Luffy dan krunya, serta beberapa Bajak Laut lainnya, 
+                            yang semuanya berusaha mengklaim harta karun di untuk menjadi Raja Bajak Laut berikutnya, mengikuti kata-kata sekarat Roger saat dieksekusi.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/jjk.jpeg'%}" alt="Produk 3">
+                    <div class="product-details">
+                        <h4 class="product-title">Jujutsu Kaisen</h4>
+                        <p class="product-price">Rp 35.000/pcs</p>
+                        <p class="product-description">Genre : Aksi, Petualangan, Fantasi</p>
+                        <p class="product-description">Manga ini mengisahkan Yuji yang masuk ke Klub Penelitian Ilmu Gaib, agar bisa bersantai dan bergaul dengan para senior. 
+                            Sayang, senior-seniornya telah membuka segel dari jimat kutukan tingkat tinggi di sekolahnya, dan menarik roh kutukan muncul. Jimat tersebut menarik Jurei,
+                            yaitu makhluk mirip monster yang muncul melalui emosi negatif manusia.</p>
+                        <a href="/order"><button  class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/dora.jpeg'%}" alt="Produk 4">
+                    <div class="product-details">
+                        <h4 class="product-title">Doraemon</h4>
+                        <p class="product-price">Rp 25.000/pcs</p>
+                        <p class="product-description">Genre : Petualangan, Fantasi</p>
+                        <p class="product-description">Doraemon dikirim kembali ke masa lalu oleh seorang anak laki-laki bernama Sewashi Nobi untuk memperbaiki keadaan kakek buyutnya, 
+                            Nobita, sehingga keturunannya dapat menikmati masa depan yang lebih baik. Dalam garis waktu aslinya, Nobita tidak mengalami apa-apa selain kesengsaraan dan kemalangan yang diwujudkan dalam bentuk nilai yang sangat buruk dan intimidasi sepanjang hidupnya. 
+                            Hal ini berpuncak pada terbakarnya bisnis masa depan yang dia dirikan yang membuat garis keluarganya dilanda masalah keuangan. </p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{% static 'img copy/bleach.webp'%}" alt="Produk 5">
+                    <div class="product-details">
+                        <h4 class="product-title">Bleach</h4>
+                        <p class="product-price">Rp 40.000/pcs</p>
+                        <p class="product-description">Genre : Aksi, Petualangan, Fantasi</p>
+                        <p class="product-description">Bleach mengikuti petualangan Ichigo Kurosaki, seorang siswa SMA memiliki kemampuan untuk melihat hantu. Bagian awal dari cerita ini berfokus terutama kepada para karakter. 
+                            Sebagaimana peristiwa terungkap, cerita dimulai untuk mempelajari lebih dalam dunia dewa kematian.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card">
+                    <img class="product-image" src="{%  static 'img copy/bc.jpeg'%}" alt="Produk 6">
+                    <div class="product-details">
+                        <h4 class="product-title">Black Clover</h4>
+                        <p class="product-price">Rp 40.000/pcs</p>
+                        <p class="product-description">Genre : Aksi, Petualangan, Fantasi, Sihir</p>
+                        <p class="product-description">Asta adalah seorang anak yatim piatu yang dibesarkan di bawah asuhan sebuah gereja di Hage setelah ibunya meninggalkannya di depan pintu gereja. Setelah menginjak usia 15 tahun, Asta menerima grimoire semanggi berdaun lima dengan iblis Anti Sihir di dalamnya.
+                             Dia bergabung dengan pasukan Banteng Hitam Kerajaan Semanggi dari Ksatria Sihir dan menjadi Ksatria Sihir Senior Kelas 1  dan untuk sementara menjadi Ksatria Kerajaan.</p>
+                        <a href="/order"><button class="btn-buy">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tambahkan produk lainnya di sini sesuai kebutuhan -->
+        </div>
+    </section>
+
+
+
+<script src="other-assets/js/jquery.js"></script>
+        
+<!--modernizr.min.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<!--bootstrap.min.js-->
+<script src="other-assets/js/bootstrap.min.js"></script>
+
+<!-- bootsnav js -->
+<script src="other-assets/js/bootsnav.js"></script>
+
+<!--owl.carousel.js-->
+<script src="other-assets/js/owl.carousel.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!--Custom JS-->
+<script src="other-assets/js/custom.js"></script>
+
+    <!-- Bootsrap java -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/tmplt/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/tmplt/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/tmplt/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/tmplt/js/templatemo.js"></script>
+    <script src="assets/tmplt/js/custom.js"></script>
+</body>
+
+</html>
+{% endblock %}
